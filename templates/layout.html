@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <title>Carbon Analyzer</title> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <link rel="icon" href="http://obj-cache.cloud.ruanbekker.com/favicon.ico">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<style type="text/css">
+#maincontainer 
+{   
+top:0px;
+padding-top:0;
+margin:0 auto; position:relative;
+width:1600px;
+height:100%;
+}
+  </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1 class="logo">&nbsp&nbsp Carbon Analyzer </h1>
+        <strong><nav>
+          <ul class="menu">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('input') }}">Input</a></li>
+            <li><a href="{{ url_for('input') }}">Store</a></li> 
+            <li><a href="{{ url_for('input') }}">Rewards</a></li>
+	    <li><a href="{{ url_for('logout') }}">Logout({{username}})</a></li>  
+          </ul>
+        </nav></strong>
+      </div>
+    </header>
+    <div class="embedes2">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block content %}
+<head>
+
+  <meta charset="utf-8">
+
+  <link rel="icon" href="http://obj-cache.cloud.ruanbekker.com/favicon.ico">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+     <title>Carbon Analyzer -Upload</title>
+
+</head>
+
+     <div class="container">
+      <div class="header">
+         <h3><center>Upload Page - MVP Simulation</center></h3>
+
+      </div>
+      <hr/>
+      <div>
+      <form action="uploadx" method="post" enctype="multipart/form-data">
+	<div class="login">
+	   <div class="login-screen">
+             <div class="login-form">
+		<div class="control-group">
+                <font size="4">
+         <input type="file"  name="file"  class="btn btn-primary btn-large pull-left" /><br>
+         <br><br>
+
+            
+         </b></font>
+        <br><br><br><br>
+        <input type="submit" class="btn btn-primary btn-large pull-left" value="Process" class="span2" onclick="$('#loading').show();"/>
+
+             </div>
+             </div>
+           </div>
+        </div>
+
+      </form>
+      </div>
+
+
+
+
+      <div id="loading" style="display:none;"><img src="{{ url_for('static',filename='loading.gif')}}" alt="" />Uploading...Transcribing...Predicting !</div>
+
+   <!-- class="span3" -->
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <footer class="footer">
+        <p>&copy; 2021 Carbon Analyzer </p>
+      </footer>
+
+   </div>
+
+{% endblock %}
